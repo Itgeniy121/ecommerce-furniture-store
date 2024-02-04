@@ -12,8 +12,11 @@ const Conclusion = () => {
     router.push("/checkout")
   }
   const deleteFromCart = (value: any) =>{
-    setProducts(JSON.parse(localStorage.getItem('products') || ""))
-    setSummOfProducts(getSummOfStorage())
+    if (typeof window !== 'undefined') {
+        setProducts(JSON.parse(localStorage.getItem('products') || ""))
+        setSummOfProducts(getSummOfStorage())
+      }
+    
   }
   return (
     <div className="w-full py-[72px] px-[35px] flex flex-col xl:flex-row items-center xl:items-start justify-between">

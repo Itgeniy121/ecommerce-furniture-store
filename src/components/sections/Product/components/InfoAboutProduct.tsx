@@ -9,48 +9,50 @@ const InfoAboutProduct = () => {
     const params: any = useParams().productId
     parseInt(params)
     const addToCart = async () =>{
+      if (typeof window !== 'undefined') {
         const item = {
+          name: allProducts[params-1].name,
+          description: allProducts[params-1].description,
+          price: allProducts[params-1].price,
+          id: allProducts[params-1].id,
+          count: count,
+        }
+        const arrayItem = [
+          {
             name: allProducts[params-1].name,
             description: allProducts[params-1].description,
             price: allProducts[params-1].price,
             id: allProducts[params-1].id,
             count: count,
           }
-          const arrayItem = [
-            {
-              name: allProducts[params-1].name,
-              description: allProducts[params-1].description,
-              price: allProducts[params-1].price,
-              id: allProducts[params-1].id,
-              count: count,
-            }
-          ]
-          const arrayItemToString = JSON.stringify(arrayItem)
-          const currentItems = JSON.parse(localStorage.getItem('products') || '[]')
-          if(localStorage.getItem('products')){
-            await currentItems.forEach((i: any)=>{
-              if(i.id == item.id){
-                flag = true
-                i.count += 1
-                console.log(flag)
-                localStorage.setItem('products', JSON.stringify(currentItems))
-              }else{
-                i.count = i.count
-              }
-            })
-            if(flag == false){
-              console.log(flag, 'тут добавил')
-              currentItems.push(item)
+        ]
+        const arrayItemToString = JSON.stringify(arrayItem)
+        const currentItems = JSON.parse(localStorage.getItem('products') || '[]')
+        if(localStorage.getItem('products')){
+          await currentItems.forEach((i: any)=>{
+            if(i.id == item.id){
+              flag = true
+              i.count += 1
+              console.log(flag)
               localStorage.setItem('products', JSON.stringify(currentItems))
             }else{
-              flag = !flag
+              i.count = i.count
             }
+          })
+          if(flag == false){
+            console.log(flag, 'тут добавил')
+            currentItems.push(item)
+            localStorage.setItem('products', JSON.stringify(currentItems))
           }else{
-            localStorage.setItem('products', arrayItemToString)
+            flag = !flag
           }
-          setCount(1)
-    }
-    const plusItemToCart = () =>{
+        }else{
+          localStorage.setItem('products', arrayItemToString)
+        }
+        setCount(1)
+  }
+      }
+      const plusItemToCart = () =>{
         if(count <= 9){
             setCount(prevSatete => prevSatete + 1)
         }

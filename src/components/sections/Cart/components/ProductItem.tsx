@@ -12,10 +12,12 @@ interface productItemProps {
 const ProductItem:FC<productItemProps> = ({name, price, count, id, handleSubmit}) => {
     const totalPrice = useState<any>(price * count)
     const deleteFromCart = () =>{
-        const items = JSON.parse(localStorage.getItem('products') || "")
-        const newList = items.filter((i: any) => i.id !== id)
-        localStorage.setItem('products', JSON.stringify(newList))
-        handleSubmit({name, price, count, id})
+        if (typeof window !== 'undefined') {
+            const items = JSON.parse(localStorage.getItem('products') || "")
+            const newList = items.filter((i: any) => i.id !== id)
+            localStorage.setItem('products', JSON.stringify(newList))
+            handleSubmit({name, price, count, id})
+          }
     }
   return (
     <div className="flex w-[350px] px-[5px] pr-[35px] flex-row  justify-between items-center mt-[55px] relative ssml:w-[395px] xsml:w-[520px] sml:w-[600px] mm:w-[770px] s:w-[817px]">
