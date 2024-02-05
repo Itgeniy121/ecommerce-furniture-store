@@ -1,5 +1,15 @@
-
-const allProducts = [
+interface allProductsElement {
+    name: string;
+    price: number,
+    id: number,
+    color: string,
+    description: string,
+    attention: string,
+  }
+interface products{
+    [index: number]: allProductsElement;
+}
+const allProducts: products = [
     {name: 'Стул', price: 33000, id: 1, color: 'red', description: 'Стул бордового цвета, материалы ткань и дерево.', attention: 'Важно! Все модели представленные на сайте - это рендеры, каждая модель изготавливается вручную и на заказ!'},
     {name: 'Стул', price: 40000, id: 2, color: 'red', description: 'Стул сделанный из дуба.', attention: 'Важно! Все модели представленные на сайте - это рендеры, каждая модель изготавливается вручную и на заказ!'},
     {name: 'Диван', price: 70000, id: 3, color: 'red', description: 'Диван для гостиной. Ткань, дерево.', attention: 'Важно! Все модели представленные на сайте - это рендеры, каждая модель изготавливается вручную и на заказ!'},
