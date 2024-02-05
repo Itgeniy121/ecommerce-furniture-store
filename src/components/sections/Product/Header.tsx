@@ -14,7 +14,7 @@ const Header = () => {
           <p className="text-[16px] text-[#9F9F9F] font-[400] ml-[12px] mr-[5px] extrasml:mr-[14px] mont">Магазин</p>
           <Image src={arrow} alt="icon" className="mr-[7px] extrasml:mr-[24px]"/>
           <div className="border-[#9F9F9F] border-r-[2px] mr-[10px] extrasml:mr-[30px]"></div>
-          <p className="text-[16px] font-[400] text-black mont">{allProducts && allProducts[params - 1].name}</p>
+          <p className="text-[16px] font-[400] text-black mont">{allProducts[params - 1].name && allProducts[params - 1].name}</p>
         </div>
     </div>
   )

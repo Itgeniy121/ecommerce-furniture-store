@@ -8,7 +8,7 @@ const Descriptiom = () => {
     <div className="w-full flex flex-col justify-center items-center mt-[115px] px-[20px] l:px-[200px]">
         <h1 className="text-[24px] mont font-[500] text-[black]">Внимание</h1>
         <p className="text-[16px] font-[400] text-[#9F9F9F] mont text-justify mt-[37px]">
-        {allProducts && allProducts[params - 1].attention}
+        {allProducts[params - 1] && allProducts[params - 1].attention}
         </p>
     </div>
   )
