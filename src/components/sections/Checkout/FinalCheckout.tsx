@@ -1,10 +1,13 @@
 'use client'
 import CheckoutForm from "./components/CheckoutForm"
 import {getSummOfStorage} from "@/helpers/LocalStorageHelper"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 const FinalCheckout = () => {
-    const [products, setProducts] = useState(JSON.parse(localStorage.getItem('products') || "[]"))
+    const [products, setProducts] = useState<any>()
     const [summOfProducts, setSummOfProducts] = useState(getSummOfStorage())
+    useEffect(() => {
+        setProducts(JSON.parse(localStorage.getItem('products') || "[]"))
+    }, [])
 
   return (
     <div className="flex flex-col justify-center xl:justify-between items-center xl:items-start w-full xl:flex-row-reverse mb-[60px]">

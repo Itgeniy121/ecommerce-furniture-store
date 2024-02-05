@@ -1,21 +1,25 @@
 "use client"
 import { useState } from "react"
+import { useEffect } from "react"
 import ProductItem from "./components/ProductItem"
 import { useRouter } from "next/navigation"
 import {getSummOfStorage} from "@/helpers/LocalStorageHelper"
 
 const Conclusion = () => {
-    const [products, setProducts] = useState(JSON.parse(localStorage.getItem('products') || "[]"))
-    const [summOfProducts, setSummOfProducts] = useState(getSummOfStorage())
+    const [products, setProducts] = useState<any>()
+    const [summOfProducts, setSummOfProducts] = useState<any>()
+    useEffect(() =>{
+        setProducts(JSON.parse(localStorage.getItem('products') || "[]"))
+        setSummOfProducts(getSummOfStorage())
+    },[])
     const router = useRouter()
     const goToCheckout = () =>{
     router.push("/checkout")
   }
   const deleteFromCart = (value: any) =>{
-    if (typeof window !== 'undefined') {
         setProducts(JSON.parse(localStorage.getItem('products') || ""))
         setSummOfProducts(getSummOfStorage())
-      }
+      
     
   }
   return (

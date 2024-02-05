@@ -5,7 +5,6 @@ import Image from 'next/image'
 import cart from "@/assets/cart.svg"
 import logo from "@/assets/logo.png"
 const Header = () => {
-  // const [countOfItemsInCart, setCountOfItemsInCart] = useState(getCountOfItems())
   const router = useRouter()
   const goToCart = () =>{
     router.push("/cart")
@@ -24,7 +23,6 @@ const Header = () => {
         </div>
         <div onClick={goToCart} className='cursor-pointer flex flex-row'>
             <Image src={cart} alt='logo' className='w-[20px] h-[20px] cursor-pointer hover:w-[23px] hover:h-[23px] duration-300'/>
-            {/* <p className='text-[#9F9F9F] text-[13px] font-[400] ml-[10px]'>{countOfItemsInCart} шт.</p> */}
         </div>
     </div>
     </>
