@@ -69,12 +69,6 @@ const InfoAboutProduct = () => {
             <p className="text-[13px] font-[400] mont text-[black] mt-[13px]">
                 {allProducts[params - 1].description}
             </p>
-            <p className="mont text-[#9F9F9F] text-[14px] font-[400] mt-[22px]">Размер</p>
-            <div className="flex flex-row justify-start mt-[12px]">
-                <div className="size-[30px] bg-[#B88E2F] rounded-[5px] flex justify-center items-center mr-[16px]">
-                    <p className="text-[13px] mont text-[black] font-[400]">XL</p>
-                </div>
-            </div>
             <div className='flex flex-row mt-[32px]'>
                 <div className='flex flex-row justify-between items-center w-[123px] h-[64px] border border-[#9F9F9F] rounded-[10px] px-[12px]'>
                     <button onClick={minusItemToCart} className='mont text-[16px] font-[400] text-black'>-</button>

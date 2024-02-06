@@ -16,7 +16,7 @@ const Pros = () => {
         <div className="flex flex-row w-[290px] h-[70px] mb-[40px]">
             <Image src={garant} alt="icon"/>
             <div className="ml-[10px] flex flex-col">
-              <h1 className="text-[25px] text-[#242424] font-[600] mont">Пожизненная гарантия</h1>
+              <h1 className="text-[25px] text-[#242424] font-[600] mont">Гарантия</h1>
               <p className="text-[18px] font-[500] text-[#898989] mont">Свыше двух лет</p>
             </div>
         </div>
@@ -24,7 +24,7 @@ const Pros = () => {
             <Image src={ship} alt="icon"/>
             <div className="ml-[10px] flex flex-col">
               <h1 className="text-[25px] text-[#242424] font-[600] mont">Бесплатная доставка</h1>
-              <p className="text-[18px] font-[500] text-[#898989] mont">От 15.000 ₽</p>
+              <p className="text-[18px] font-[500] text-[#898989] mont">От 15 тыс. ₽</p>
             </div>
         </div>
         <div className="flex flex-row w-[300px] h-[70px] mb-[40px]">

@@ -17,7 +17,7 @@ const InfoAboutUs = () => {
                 <Image src={phone} alt="phone"/>
                 <div className="flex flex-col ml-[20px]">
                     <h1 className="text-[24px] text-[black] font-[500] mont">Телефон</h1>
-                    <p className="text-[16px] text-[black] font-[400] mont">+7 (994) 139-52-47</p>
+                    <p className="text-[16px] text-[black] font-[400] mont">+7 (994) 139-58-77</p>
                 </div>
             </div>
             <div className="flex flex-row items-start justify-start mt-[42px] w-full">

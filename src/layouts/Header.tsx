@@ -9,10 +9,13 @@ const Header = () => {
   const goToCart = () =>{
     router.push("/cart")
   }
+  const goToMain = () =>{
+    router.push("/")
+  }
   return (
     <>
-    <div className='w-full h-[100px] flex flex-row justify-between items-center pl-[10px] pr-[10px] py-[30px] mm:pl-[54px] mm:pr-[100px]'>
-        <div className='flex flex-row justify-center items-center'>
+    <div className='max-w-[1440px] h-[100px] flex flex-row justify-between items-center pl-[10px] pr-[10px] py-[30px] mm:pl-[54px] mm:pr-[54px]'>
+        <div className='flex flex-row justify-center items-center cursor-pointer' onClick={goToMain}>
             <Image src={logo} alt='logo' className='w-[50px] h-[32px]'/>
             <h1 className='hidden text-[18px] mont font-[700] ml-[5px] sml:flex s:text-[28px]'>Фурнитура</h1>
         </div>
