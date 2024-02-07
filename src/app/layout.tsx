@@ -4,7 +4,7 @@ import Footer from '@/layouts/Footer'
 import "../../public/globals.css"
 import Head from 'next/head'
 import {Montserrat} from 'next/font/google'
-
+import { Toaster } from 'react-hot-toast'
 const mont = Montserrat({
   subsets: ['cyrillic'],
   weight: ['300', '400', '500', '600', '700'],
@@ -28,6 +28,16 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
       </Head>
       <body className={mont.variable}>
+        <Toaster position="top-right" toastOptions={{
+    duration: 1500,
+    style: {
+      background: '#363636',
+      color: '#fff',
+    },
+    success: {
+      duration: 1500,
+    },
+  }}/>
         <Header/>
         {children}
         <Footer/>

@@ -3,6 +3,7 @@ import InfoAboutProduct from "./components/InfoAboutProduct"
 import Image from "next/image"
 import { useParams } from "next/navigation"
 import { useState } from "react"
+
 const AboutProduct = () => {
   const [mainImage, setMainImage] = useState(1)
   const params: any = useParams().productId
@@ -16,6 +17,7 @@ const AboutProduct = () => {
     setMainImage(3)
   }
   parseInt(params)
+  
   return (
     <div className="w-full flex ipad:flex-row flex-col xxl:px-[90px] mt-[32px] items-center ipad:justify-center">
         <div className="flex flex-col-reverse sml:flex-row ipad:mr-[30px] l2:mr-[105px]">

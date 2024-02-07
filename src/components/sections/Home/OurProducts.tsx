@@ -13,10 +13,10 @@ const OurProducts = () => {
                 <ItemCard count={1} id={allProducts[2].id} price={allProducts[2].price} description={allProducts[2].description} name={allProducts[2].name}/>
                 <ItemCard count={1} id={allProducts[3].id} price={allProducts[3].price} description={allProducts[3].description} name={allProducts[3].name}/>
             </div>
-            <ItemCard count={1} id={allProducts[0].id} price={allProducts[0].price} description={allProducts[0].description} name={allProducts[0].name}/>
-            <ItemCard count={1} id={allProducts[1].id} price={allProducts[1].price} description={allProducts[1].description} name={allProducts[1].name}/>
-            <ItemCard count={1} id={allProducts[2].id} price={allProducts[2].price} description={allProducts[2].description} name={allProducts[2].name}/>
-            <ItemCard count={1} id={allProducts[3].id} price={allProducts[3].price} description={allProducts[3].description} name={allProducts[3].name}/>
+            <div className="hidden l2:flex"><ItemCard count={1} id={allProducts[0].id} price={allProducts[0].price} description={allProducts[0].description} name={allProducts[0].name}/></div>
+            <div className="hidden l2:flex"><ItemCard count={1} id={allProducts[1].id} price={allProducts[1].price} description={allProducts[1].description} name={allProducts[1].name}/></div>
+            <div className="hidden l2:flex"><ItemCard count={1} id={allProducts[2].id} price={allProducts[2].price} description={allProducts[2].description} name={allProducts[2].name}/></div>
+            <div className="hidden l2:flex"><ItemCard count={1} id={allProducts[3].id} price={allProducts[3].price} description={allProducts[3].description} name={allProducts[3].name}/></div>
         </div>
         <button className="mt-[32px] w-[245px] h-[48px] border border-[#B88E2F] bg-white hover:bg-[#B88E2F] duration-300"><p className="text-[16px] text-[#B88E2F] font-[600] hover:text-white duration-300">Подробнее</p></button>
     </div>

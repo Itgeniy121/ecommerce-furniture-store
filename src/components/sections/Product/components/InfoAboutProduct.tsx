@@ -2,7 +2,7 @@
 import {allProducts} from "@/store/SotorageOfProducts"
 import { useParams } from 'next/navigation'
 import React, { useState } from 'react'
-
+import toast from "react-hot-toast"
 const InfoAboutProduct = () => {
     const [count, setCount] = useState(1)
     let flag = false
@@ -34,7 +34,8 @@ const InfoAboutProduct = () => {
               flag = true
               i.count += 1
               console.log(flag)
-              localStorage.setItem('products', JSON.stringify(currentItems))
+              localStorage.setItem('products', JSON.stringify(currentItems))  
+              toast(`${item.name} добавлено в корзину`)           
             }else{
               i.count = i.count
             }
@@ -43,11 +44,14 @@ const InfoAboutProduct = () => {
             console.log(flag, 'тут добавил')
             currentItems.push(item)
             localStorage.setItem('products', JSON.stringify(currentItems))
+            toast(`${item.name} добавлено в корзину`)
+
           }else{
             flag = !flag
           }
         }else{
           localStorage.setItem('products', arrayItemToString)
+          toast(`${item.name} добавлено в корзину`)
         }
         setCount(1)
   }
@@ -75,7 +79,7 @@ const InfoAboutProduct = () => {
                     <p className='mont text-[16px] font-[400] text-black'>{count}</p>
                     <button onClick={plusItemToCart} className='mont text-[16px] font-[400] text-black'>+</button>
                 </div>
-                <div onClick={addToCart} className='flex flex-row justify-center items-center w-[123px] h-[64px] border border-[#000] rounded-[10px] ml-[18px]'>
+                <div onClick={addToCart} className=' active:bg-[#898989] duration-200 flex flex-row justify-center items-center w-[123px] h-[64px] border border-[#000] rounded-[10px] ml-[18px]'>
                     <p className='mont text-[16px] font-[400] text-black hover:underline cursor-pointer'>В корзину</p>
                 </div>
             </div>

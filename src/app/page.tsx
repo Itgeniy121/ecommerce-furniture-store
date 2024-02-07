@@ -9,6 +9,7 @@ export default function Home() {
       <ForHome/>
       <OurProducts/>
       <FurnitureSelection/>
+      
     </div>
   )
 }

@@ -2,7 +2,7 @@
 import MainImage from "@/components/sections/Cart/MainImage"
 import Conclusion from "@/components/sections/Cart/Conclusion"
 import Pros from "@/layouts/Pros"
-const page = ({handleSubmit}: any) => {
+const page = () => {
   
   return (
     <div className="main__container">

@@ -12,7 +12,7 @@ const Footer = () => {
     reset()
   }
   return (
-    <div className="max-w-[1440px] flex flex-col items-center justify-center mt-[50px]">
+    <div className="main__container flex flex-col items-center justify-center mt-[50px]">
       <div className="w-full border-t border-t-[#0000002B] pt-[48px] flex flex-col px-[25px] med:flex-row med:justify-between ipad:px-[100px]">
         <div className="flex flex-col">
           <h1 className="text-[black] text-[21px] mont font-[700]">Фурнитура.ру</h1>

@@ -13,17 +13,13 @@
  
   html {
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
   }
   
   html, body {
   background: #ffffff;
   color: #000000;
   }
-  
+
   .main__container {
   max-width: 1440px;
   margin-left: auto;
@@ -41,4 +37,10 @@
   
   .back{
     background-color: rgba(0, 0, 0, 0.45);
+  }
+  .authModal {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .hide{
+    display: none !important;
   }
