@@ -3,7 +3,11 @@ import InfoAboutProduct from "./components/InfoAboutProduct"
 import Image from "next/image"
 import { useParams } from "next/navigation"
 import { useState } from "react"
+import dynamic from "next/dynamic"
 
+const Miniature = dynamic(() => import('./components/MiniatureImage'))
+const Miniature2 = dynamic(() => import('./components/MiniatureImage2'))
+const Miniatur3 = dynamic(() => import('./components/MiniatureImage3'))
 const AboutProduct = () => {
   const [mainImage, setMainImage] = useState(1)
   const params: any = useParams().productId
@@ -27,9 +31,9 @@ const AboutProduct = () => {
                 <div onClick={setImageThree} className="w-[76px] h-[80px] flex items-center justify-center border-[2px] rounded-[10px] cursor-pointer"><Image src={`/${params}.2.png`} width={100} height={100} className="w-[95%] h-[95%]" alt="product"/></div>
             </div>
             <div className="w-[350px] extrasml:w-[423px] h-[500px] flex items-center justify-center rounded-[10px]">
-              {mainImage === 1 && <Image src={`/${params}.png`} width={1000} height={1000} className="w-full h-full" alt="product"/>}
-              {mainImage === 2 && <Image src={`/${params}.1.png`} width={1000} height={1000} className="w-full h-full" alt="product"/>}
-              {mainImage === 3 && <Image src={`/${params}.2.png`} width={1000} height={1000} className="w-full h-full" alt="product"/>}
+              {mainImage === 1 &&  <Miniature params={params}/>}
+              {mainImage === 2 && <Miniature2 params={params}/>}
+              {mainImage === 3 && <Miniatur3 params={params}/>}
             </div>
         </div>
         <InfoAboutProduct/>
