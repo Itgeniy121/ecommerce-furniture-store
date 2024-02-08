@@ -7,7 +7,7 @@ interface props{
 
 const MiniatureImage3: FC<props> = ({params}) => {
   return (
-    <Image src={`/${params}.1.png`} width={1000} height={1000} className="w-full h-full" alt="product"/>
+    <Image src={`/${params}.2.png`} width={1000} height={1000} className="w-full h-full" alt="product"/>
   )
 }
 

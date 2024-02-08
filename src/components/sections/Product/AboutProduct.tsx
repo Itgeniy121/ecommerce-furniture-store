@@ -7,7 +7,7 @@ import dynamic from "next/dynamic"
 
 const Miniature = dynamic(() => import('./components/MiniatureImage'))
 const Miniature2 = dynamic(() => import('./components/MiniatureImage2'))
-const Miniatur3 = dynamic(() => import('./components/MiniatureImage3'))
+const Miniature3 = dynamic(() => import('./components/MiniatureImage3'))
 const AboutProduct = () => {
   const [mainImage, setMainImage] = useState(1)
   const params: any = useParams().productId
@@ -33,7 +33,7 @@ const AboutProduct = () => {
             <div className="w-[350px] extrasml:w-[423px] h-[500px] flex items-center justify-center rounded-[10px]">
               {mainImage === 1 &&  <Miniature params={params}/>}
               {mainImage === 2 && <Miniature2 params={params}/>}
-              {mainImage === 3 && <Miniatur3 params={params}/>}
+              {mainImage === 3 && <Miniature3 params={params}/>}
             </div>
         </div>
         <InfoAboutProduct/>
